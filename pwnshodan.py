@@ -32,7 +32,7 @@ with open(main_domains_file, 'r') as domains:
             print(colored("[+] Searching for: ", 'green') + line)
            
             # org search 
-            org_query = 'Org:"' + line + '" 200'
+            org_query = 'org:"' + line + '" 200'
             for banner in api.search_cursor(org_query):
                 for hostname in banner['hostnames']:
                 	results.append(hostname)
